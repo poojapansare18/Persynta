@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: persynta-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: persynta
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: persynta_dev
+    ports:
+      - "5433:5432"
+    volumes:
+      - persynta_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  persynta_postgres_data:
