@@ -42,7 +42,7 @@ export default function Home() {
             </p>
 
             <h1 className="mt-1 text-2xl font-semibold tracking-tight">
-              Good morning, Pooja.
+              Good evening, Pooja.
             </h1>
 
             <p className="mt-1 text-sm text-muted-foreground">
