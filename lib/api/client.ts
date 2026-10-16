@@ -39,6 +39,12 @@ async function request<T>(
       const payload = await response.json();
       if (typeof payload?.detail === "string") {
         message = payload.detail;
+      } else if (
+        payload?.detail &&
+        typeof payload.detail === "object" &&
+        typeof payload.detail.message === "string"
+      ) {
+        message = payload.detail.message;
       } else if (typeof payload?.message === "string") {
         message = payload.message;
       } else if (typeof payload?.error === "string") {
