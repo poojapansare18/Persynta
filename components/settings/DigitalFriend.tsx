@@ -162,7 +162,7 @@ export default function DigitalFriend() {
               </p>
 
               <p className="mt-1 text-xs text-muted-foreground">
-                Persynta can call again when you don't answer.
+                Persynta can call again when you don&apos;t answer.
               </p>
             </div>
 
@@ -240,7 +240,7 @@ export default function DigitalFriend() {
               <RefreshCw className="mt-0.5 h-4 w-4 shrink-0" />
 
               <p className="text-xs leading-5 text-muted-foreground">
-                Example: if you don't answer the first call,
+                Example: if you don&apos;t answer the first call,
                 Persynta can retry after 5 minutes, up to the
                 configured maximum attempts.
               </p>

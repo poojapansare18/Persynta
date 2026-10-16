@@ -1,5 +1,7 @@
 "use client";
 
+import { apiUrl } from "@/lib/api/client";
+
 import { useEffect, useState } from "react";
 
 type Meeting = {
@@ -37,7 +39,7 @@ export default function MeetingConfirmationPage({
         setToken(token);
 
         const response = await fetch(
-          `http://localhost:8000/meetings/confirm/${token}`,
+          apiUrl(`/meetings/confirm/${token}`),
         );
 
         const data = await response.json();
@@ -72,7 +74,7 @@ export default function MeetingConfirmationPage({
 
     try {
       const response = await fetch(
-        `http://localhost:8000/meetings/confirm/${token}`,
+        apiUrl(`/meetings/confirm/${token}`),
         {
           method: "POST",
         },
