@@ -1,5 +1,7 @@
 "use client";
 
+import { apiUrl } from "@/lib/api/client";
+
 import { useEffect, useState } from "react";
 
 type Guest = {
@@ -91,7 +93,7 @@ export default function ChangeMeetingPage({
       setToken(token);
 
       fetch(
-        `http://localhost:8000/meetings/change/${token}`
+        apiUrl(`/meetings/change/${token}`)
       )
         .then(async (response) => {
           const body = await response.json();
@@ -200,7 +202,7 @@ export default function ChangeMeetingPage({
     try {
       const response =
         await fetch(
-          `http://localhost:8000/meetings/change/${token}`,
+          apiUrl(`/meetings/change/${token}`),
           {
             method: "POST",
             headers: {
