@@ -1,5 +1,7 @@
 "use client";
 
+import { apiUrl } from "@/lib/api/client";
+
 import { useEffect, useState } from "react";
 
 type Meeting = {
@@ -42,7 +44,7 @@ export default function CancelMeetingPage({
     const loadMeeting = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8000/meetings/cancel/${token}`
+          apiUrl(`/meetings/cancel/${token}`)
         );
 
         if (!response.ok) {
@@ -77,7 +79,7 @@ export default function CancelMeetingPage({
 
     try {
       const response = await fetch(
-        `http://localhost:8000/meetings/cancel/${token}`,
+        apiUrl(`/meetings/cancel/${token}`),
         {
           method: "POST",
         }
