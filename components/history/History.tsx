@@ -2,10 +2,8 @@
 
 import { useMemo, useState } from "react";
 import {
-  Bell,
   CalendarDays,
   CheckCircle2,
-  Clock,
   FileText,
   Phone,
   Search,
